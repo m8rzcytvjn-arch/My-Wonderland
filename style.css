@@ -1,0 +1,2265 @@
+@font-face {
+    font-family: "Poland Canned Into Kaito";
+    src: url("PolandCannedIntoKaito-G3ErD.otf") format("opentype");
+    font-display: swap;
+}
+
+body {
+    font-family: "Poland Canned Into Kaito", sans-serif;
+}
+
+#welcome-screen[hidden],
+#site-content[hidden] {
+    display: none;
+}
+
+.welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: url("jpg.jpg") center / cover no-repeat;
+}
+
+.welcome-card {
+    display: grid;
+    justify-items: center;
+    gap: 28px;
+    padding: 24px;
+}
+
+.welcome-stage {
+    position: relative;
+    width: min(94vw, 760px);
+    height: min(62vh, 420px);
+    min-height: 360px;
+    outline: none;
+}
+
+.welcome-disc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: min(76vw, 340px);
+    aspect-ratio: 1;
+    place-items: center;
+    transform: translate(-50%, -50%);
+    transition: transform 2s cubic-bezier(0.75, 0.45, 0.05, 1);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 24px #0006, inset 0 0 18px #0006;
+}
+
+.welcome-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(270deg);
+}
+
+.welcome-title {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    animation: welcome-title-spin 32s linear infinite;
+}
+
+.welcome-title text {
+    fill: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    letter-spacing: 2px;
+    paint-order: stroke;
+    stroke: #4b3029;
+    stroke-width: 1.5px;
+}
+
+.welcome-popout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    align-content: center;
+    width: min(34vw, 230px);
+    min-height: 112px;
+    padding: 14px;
+    border: 2px solid #fff;
+    border-radius: 18px;
+    background: #fff8f4eF;
+    box-shadow: 0 4px 18px #0005;
+    color: #38242a;
+    opacity: 0;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0.7);
+    transition: transform 1.2s cubic-bezier(0.75, 0.45, 0.05, 1), opacity 0.5s ease;
+}
+
+.welcome-popout h2,
+.welcome-popout p {
+    margin: 4px 0;
+    font: 16px Arial, Helvetica, sans-serif;
+}
+
+.welcome-popout h2 {
+    font-size: 20px;
+}
+
+.welcome-stage:hover .welcome-disc,
+.welcome-stage:focus .welcome-disc {
+    transform: translate(calc(-50% - 145px), -50%);
+}
+
+.welcome-stage:hover .welcome-popout,
+.welcome-stage:focus .welcome-popout {
+    opacity: 1;
+}
+
+.welcome-stage:hover .popout-one,
+.welcome-stage:focus .popout-one {
+    transform: translate(16px, -165%) scale(1);
+}
+
+.welcome-stage:hover .popout-two,
+.welcome-stage:focus .popout-two {
+    transform: translate(16px, -50%) scale(1);
+    transition-delay: 0.2s;
+}
+
+.welcome-stage:hover .popout-three,
+.welcome-stage:focus .popout-three {
+    transform: translate(16px, 65%) scale(1);
+    transition-delay: 0.4s;
+}
+
+.start-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: min(290px, 82vw);
+    height: 58px;
+    padding: 7px 14px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    border-radius: 32px;
+    background: #fff5f8;
+    box-shadow: 0 4px 16px #0005;
+    color: #38242a;
+    cursor: pointer;
+    font: 600 16px Arial, Helvetica, sans-serif;
+}
+
+.start-button:focus-visible {
+    outline: 3px solid #7b4f81;
+    outline-offset: 4px;
+}
+
+.start-cake {
+    display: block;
+    flex: 0 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+}
+
+.start-label {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.start-label span {
+    display: inline-block;
+    animation: welcome-marquee 14s linear infinite;
+}
+
+@keyframes welcome-marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes welcome-title-spin {
+    to { transform: rotate(360deg); }
+}
+
+header {
+    background-image: url("tenor.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 180px;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+
+}
+
+.home-banner {
+    min-height: 180px;
+    padding: 28px 20px;
+    background-image: url("tenor.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.home-banner h1 {
+    margin: 0;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(44px, 9vw, 88px);
+    text-shadow: 2px 3px 5px #2229;
+}
+
+.home-banner > p {
+    margin: 8px 0 0;
+    color: #fff;
+    font: 600 18px/1.4 Arial, Helvetica, sans-serif;
+    text-shadow: 1px 2px 4px #222;
+}
+
+.homepage-banner-decoration {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+
+.homepage-banner-decoration img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+header h1 {
+    font-size: clamp(44px, 9vw, 88px);
+}
+
+.rainbow-title span {
+    display: inline-block;
+}
+
+.rainbow-title span:nth-child(6n + 1) { color: #f4a6b8; }
+.rainbow-title span:nth-child(6n + 2) { color: #f7c99b; }
+.rainbow-title span:nth-child(6n + 3) { color: #f6e7a1; }
+.rainbow-title span:nth-child(6n + 4) { color: #b9dfc5; }
+.rainbow-title span:nth-child(6n + 5) { color: #a9dbe8; }
+.rainbow-title span:nth-child(6n) { color: #cbb7e8; }
+
+.scrapbook-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: clamp(30px, 7vw, 64px);
+    line-height: 1.5;
+}
+
+.scrapbook-title span:not(.space) {
+    display: inline-block;
+    color: var(--c);
+    transform: rotate(var(--r));
+    background: white;
+    padding: 0 5px;
+    border: 2px solid #333;
+    box-shadow: 2px 3px 0 #333;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.scrapbook-title .space {
+    width: 10px;
+}
+.menu {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-toggle {
+    display: flex;
+    width: 48px;
+    height: 44px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: #222;
+}
+
+.menu-toggle:focus-visible,
+.menu-panel a:focus-visible {
+    outline: 3px solid #00b4d8;
+    outline-offset: 3px;
+}
+
+.menu-panel {
+    display: grid;
+    min-width: 220px;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 4px 16px #0004;
+}
+
+.menu-panel[hidden] {
+    display: none;
+}
+
+.menu-panel a {
+    padding: 10px 12px;
+    border-radius: 4px;
+    color: #222;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.menu-panel a:hover {
+    background: #eee;
+}
+
+.pointer-effects {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pointer-particle {
+    position: absolute;
+    line-height: 1;
+    user-select: none;
+    animation: pointer-particle-float var(--particle-duration) ease-out forwards;
+}
+
+@keyframes pointer-particle-float {
+    from {
+        opacity: 0.9;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--particle-x)), calc(-50% + var(--particle-y))) scale(0.35) rotate(25deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.panel-layout {
+    display: grid;
+    grid-template-columns: minmax(140px, 1fr) minmax(0, 2fr) minmax(140px, 1fr);
+    gap: 20px;
+    min-height: 100vh;
+    padding: 24px;
+    background: url("jpg.jpg") center / cover no-repeat;
+}
+
+.homepage-content {
+    position: relative;
+    isolation: isolate;
+    min-height: calc(100vh - 180px);
+    padding: clamp(24px, 5vw, 64px);
+    overflow: hidden;
+    background: #fff;
+    color: #3d3a40;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.homepage-stickers {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.homepage-stickers img {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    opacity: 0.78;
+}
+
+.homepage-stickers img:nth-child(1) { top: 4%; left: 1%; }
+.homepage-stickers img:nth-child(2) { top: 8%; right: 2%; }
+.homepage-stickers img:nth-child(3) { top: 20%; right: 1%; }
+.homepage-stickers img:nth-child(4) { top: 31%; left: 2%; }
+.homepage-stickers img:nth-child(5) { top: 39%; left: 1%; }
+.homepage-stickers img:nth-child(6) { top: 50%; right: 2%; }
+.homepage-stickers img:nth-child(7) { top: 59%; right: 1%; }
+.homepage-stickers img:nth-child(8) { top: 68%; left: 2%; }
+.homepage-stickers img:nth-child(9) { top: 77%; left: 1%; }
+.homepage-stickers img:nth-child(10) { top: 84%; right: 2%; }
+.homepage-stickers img:nth-child(11) { top: 92%; right: 1%; }
+.homepage-stickers img:nth-child(12) { top: 95%; left: 2%; }
+
+.homepage-flower-stars {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.homepage-flower-stars span {
+    position: absolute;
+    color: #d9a9c7;
+    font: 34px/1 Georgia, serif;
+    opacity: 0.68;
+    text-shadow: 0 1px 2px #fff;
+}
+
+.homepage-flower-stars span:nth-child(4n + 1) { color: #d99fba; }
+.homepage-flower-stars span:nth-child(4n + 2) { color: #a99bd0; }
+.homepage-flower-stars span:nth-child(4n + 3) { color: #a7c8b0; }
+.homepage-flower-stars span:nth-child(4n) { color: #e3c47f; }
+
+.homepage-flower-stars span:nth-child(1) { top: 7%; left: 12%; }
+.homepage-flower-stars span:nth-child(2) { top: 13%; right: 13%; }
+.homepage-flower-stars span:nth-child(3) { top: 23%; left: 5%; }
+.homepage-flower-stars span:nth-child(4) { top: 29%; right: 6%; }
+.homepage-flower-stars span:nth-child(5) { top: 38%; left: 12%; }
+.homepage-flower-stars span:nth-child(6) { top: 46%; right: 10%; }
+.homepage-flower-stars span:nth-child(7) { top: 55%; left: 5%; }
+.homepage-flower-stars span:nth-child(8) { top: 62%; right: 5%; }
+.homepage-flower-stars span:nth-child(9) { top: 70%; left: 12%; }
+.homepage-flower-stars span:nth-child(10) { top: 77%; right: 12%; }
+.homepage-flower-stars span:nth-child(11) { top: 84%; left: 5%; }
+.homepage-flower-stars span:nth-child(12) { top: 91%; right: 5%; }
+.homepage-flower-stars span:nth-child(13) { top: 18%; left: 3%; font-size: 24px; }
+.homepage-flower-stars span:nth-child(14) { top: 34%; right: 3%; font-size: 25px; }
+.homepage-flower-stars span:nth-child(15) { top: 66%; left: 3%; font-size: 26px; }
+.homepage-flower-stars span:nth-child(16) { top: 88%; right: 3%; font-size: 24px; }
+
+.homepage-profile {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(16px, 2.5vw, 24px);
+    width: min(100%, 620px);
+    margin: 0 auto;
+}
+
+.homepage-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 4px 5px #37303b33);
+    object-fit: cover;
+    transform: rotate(270deg);
+    -webkit-mask-image: url("https://i.postimg.cc/wjyjCPqz/911-sin-t-tulo-20240530174102.png");
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url("https://i.postimg.cc/wjyjCPqz/911-sin-t-tulo-20240530174102.png");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.homepage-photo-column {
+    min-width: 0;
+}
+
+.homepage-bio {
+    min-width: 0;
+    max-width: 430px;
+    text-align: center;
+}
+
+.homepage-name-row {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.homepage-bio h2 {
+    margin: 0;
+    color: #7f6484;
+    font: 700 40px/1.1 "Poland Canned Into Kaito", Georgia, serif;
+}
+
+.homepage-name-decoration {
+    display: block;
+    width: clamp(70px, 12vw, 115px);
+    height: auto;
+    flex: 0 1 auto;
+    object-fit: contain;
+}
+
+.homepage-bio h2 span {
+    display: inline-block;
+    margin: 0 0.12em;
+    color: #c28eaa;
+    font-family: Georgia, serif;
+    font-size: 0.65em;
+    vertical-align: 0.12em;
+}
+
+.homepage-details {
+    margin: 10px 0 18px;
+    color: #5b565e;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.homepage-details span {
+    margin: 0 6px;
+    color: #a17d9f;
+}
+
+.homepage-tagline {
+    position: relative;
+    display: flex;
+    min-height: 64px;
+    max-width: 340px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 34px;
+    border: 3px solid #a8c5df;
+    border-radius: 14px;
+    background: #eef4fa;
+    box-shadow: 0 3px 10px #566a7b22;
+    text-align: center;
+}
+
+.homepage-tagline p {
+    margin: 0;
+    color: #465d73;
+    font: 700 clamp(15px, 2vw, 19px)/1.35 Arial, Helvetica, sans-serif;
+}
+
+.homepage-flower {
+    position: absolute;
+    top: -13px;
+    color: #d89bb5;
+    font: 24px/1 Georgia, serif;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.homepage-flower-left {
+    left: 12px;
+}
+
+.homepage-flower-right {
+    right: 12px;
+    color: #a4c8ac;
+}
+
+.homepage-interests {
+    max-width: 390px;
+    margin: 18px auto 0;
+    color: #514d55;
+    font-size: clamp(14px, 1.7vw, 17px);
+    line-height: 1.55;
+    text-align: center;
+}
+
+.homepage-after-profile {
+    display: flex;
+    min-height: clamp(100px, 13vw, 150px);
+    margin: 8px 0 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage-after-profile img {
+    display: block;
+    width: 100%;
+    height: clamp(100px, 13vw, 150px);
+    object-fit: contain;
+}
+
+.homepage-welcome {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: clamp(56px, 7vw, 64px) clamp(24px, 5vw, 44px) clamp(24px, 5vw, 44px);
+    border: 3px solid #d6c5db;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 6px 20px #4035481f;
+    text-align: center;
+}
+
+.homepage-welcome-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.homepage-welcome-deer {
+    display: none;
+}
+
+.homepage-welcome-decoration {
+    position: absolute;
+    top: 59px;
+    left: calc(50% + 160px);
+    z-index: 2;
+    display: block;
+    width: 56px;
+    height: 64px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.homepage-welcome h2 {
+    margin: 0;
+    color: #7f6484;
+    font: 700 clamp(30px, 5vw, 44px)/1.1 "Poland Canned Into Kaito", Georgia, serif;
+    letter-spacing: 0.08em;
+}
+
+.homepage-welcome p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #514d55;
+    font: 17px/1.7 Arial, Helvetica, sans-serif;
+}
+
+.middle-panels {
+    display: grid;
+    grid-template-rows: repeat(2, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.text-panel {
+    border-width: 7px;
+    border-style: solid;
+    border-image: url("https://i.imgur.com/8xftJ3v.gif") 7 fill round;
+    padding: 20px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.side-panel {
+    background-color: #f4d7e3;
+}
+
+.middle-panel-one {
+    background-color: #d9e9f7;
+    border-width: 7px;
+    border-style: solid;
+    border-image-source: url("https://i.imgur.com/ROjUrNz.gif");
+    border-image-slice: 6 fill;
+    border-image-repeat: round;
+}
+
+.middle-panel-one h2 {
+    margin: 0 0 12px;
+    font-size: 1.35em;
+}
+
+.middle-panel-two {
+    background-color: #e4d9f2;
+}
+
+.cool-things-page {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cool-things-section {
+    margin-top: 24px;
+    padding: 24px;
+    border: 7px solid;
+    border-image: url("https://i.imgur.com/8xftJ3v.gif") 7 fill round;
+    background-color: #f8f0e8;
+    box-shadow: 0 4px 16px #0002;
+}
+
+.cool-things-section h2 {
+    margin: 0 0 16px;
+    color: #aa7894;
+    font-size: clamp(24px, 3vw, 34px);
+}
+
+.cool-things-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+    gap: 14px;
+}
+
+.cool-thing-link {
+    display: flex;
+    min-height: 64px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 18px;
+    border: 1px solid #78917b;
+    border-radius: 10px;
+    background: #fff9;
+    color: #263529;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.cool-thing-link:hover {
+    background: #dcebdc;
+    transform: translateY(-2px);
+}
+
+.cool-thing-link:focus-visible {
+    outline: 3px solid #31553b;
+    outline-offset: 3px;
+}
+
+.text-panel p {
+    margin: 0;
+}
+
+.about-page {
+    position: relative;
+    min-height: 100vh;
+    padding: 22px clamp(14px, 3vw, 44px) 40px;
+    background-image:
+        repeating-linear-gradient(to bottom, transparent 0 31px, #b9cce04d 31px 32px),
+        linear-gradient(#ffffff66, #ffffff66),
+        url("jpg.jpg");
+    background-position: 0 0, 0 0, center;
+    background-size: auto, auto, cover;
+    background-attachment: scroll, scroll, fixed;
+    scroll-margin-top: 20px;
+    color: #263529;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-scrapbook-stickers {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-scrapbook-stickers span {
+    position: absolute;
+    color: #c99fba;
+    font: 20px/1 Georgia, serif;
+    opacity: 0.78;
+    text-shadow: 0 1px 2px #fff;
+}
+
+.about-scrapbook-stickers span:nth-child(4n + 1) { color: #c597b6; }
+.about-scrapbook-stickers span:nth-child(4n + 2) { color: #d899a9; }
+.about-scrapbook-stickers span:nth-child(4n + 3) { color: #90ad8b; }
+.about-scrapbook-stickers span:nth-child(4n) { color: #bea676; }
+.about-scrapbook-stickers span:nth-child(1) { top: 11%; left: 2%; transform: rotate(-14deg); }
+.about-scrapbook-stickers span:nth-child(2) { top: 25%; right: 2%; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(3) { top: 39%; left: 2%; transform: rotate(10deg); }
+.about-scrapbook-stickers span:nth-child(4) { top: 52%; right: 2%; transform: rotate(-12deg); }
+.about-scrapbook-stickers span:nth-child(5) { top: 64%; left: 2%; transform: rotate(8deg); }
+.about-scrapbook-stickers span:nth-child(6) { top: 76%; right: 2%; transform: rotate(-10deg); }
+.about-scrapbook-stickers span:nth-child(7) { top: 88%; left: 2%; transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(8) { top: 96%; right: 3%; transform: rotate(14deg); }
+.about-scrapbook-stickers span:nth-child(9) { top: 18%; right: 3%; transform: rotate(8deg); }
+.about-scrapbook-stickers span:nth-child(10) { top: 33%; left: 3%; transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(11) { top: 70%; left: 3%; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(12) { top: 83%; right: 3%; transform: rotate(-14deg); }
+.about-scrapbook-stickers span:nth-child(13) { top: 7%; right: 15%; font-size: 14px; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(14) { top: 14%; left: 15%; font-size: 25px; transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(15) { top: 21%; right: 12%; font-size: 23px; filter: hue-rotate(45deg) saturate(.7); transform: rotate(8deg); }
+.about-scrapbook-stickers span:nth-child(16) { top: 28%; left: 14%; font-size: 17px; transform: rotate(-12deg); }
+.about-scrapbook-stickers span:nth-child(17) { top: 35%; right: 16%; font-size: 25px; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(18) { top: 42%; left: 13%; font-size: 15px; transform: rotate(-10deg); }
+.about-scrapbook-stickers span:nth-child(19) { top: 49%; right: 14%; font-size: 19px; transform: rotate(8deg); }
+.about-scrapbook-stickers span:nth-child(20) { top: 56%; left: 15%; font-size: 24px; filter: hue-rotate(100deg) saturate(.65); transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(21) { top: 63%; right: 15%; font-size: 16px; transform: rotate(14deg); }
+.about-scrapbook-stickers span:nth-child(22) { top: 69%; left: 13%; font-size: 26px; transform: rotate(-12deg); }
+.about-scrapbook-stickers span:nth-child(23) { top: 75%; right: 14%; font-size: 18px; transform: rotate(10deg); }
+.about-scrapbook-stickers span:nth-child(24) { top: 81%; left: 14%; font-size: 22px; filter: hue-rotate(170deg) saturate(.7); transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(25) { top: 87%; right: 15%; font-size: 15px; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(26) { top: 93%; left: 14%; font-size: 25px; transform: rotate(-14deg); }
+.about-scrapbook-stickers span:nth-child(27) { top: 17%; right: 4%; font-size: 15px; transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(28) { top: 31%; left: 4%; font-size: 22px; filter: hue-rotate(235deg) saturate(.65); transform: rotate(10deg); }
+.about-scrapbook-stickers span:nth-child(29) { top: 46%; right: 4%; font-size: 24px; transform: rotate(-10deg); }
+.about-scrapbook-stickers span:nth-child(30) { top: 60%; left: 4%; font-size: 14px; transform: rotate(12deg); }
+.about-scrapbook-stickers span:nth-child(31) { top: 73%; right: 4%; font-size: 21px; filter: hue-rotate(300deg) saturate(.7); transform: rotate(-8deg); }
+.about-scrapbook-stickers span:nth-child(32) { top: 90%; left: 4%; font-size: 18px; transform: rotate(10deg); }
+.about-scrapbook-stickers span:nth-child(33) { top: 23%; left: 8%; font-size: 13px; transform: rotate(-10deg); }
+.about-scrapbook-stickers span:nth-child(34) { top: 54%; right: 8%; font-size: 26px; transform: rotate(8deg); }
+.about-scrapbook-stickers span:nth-child(35) { top: 78%; left: 8%; font-size: 17px; filter: hue-rotate(75deg) saturate(.7); transform: rotate(-12deg); }
+.about-scrapbook-stickers span:nth-child(36) { top: 97%; right: 9%; font-size: 22px; filter: hue-rotate(200deg) saturate(.7); transform: rotate(10deg); }
+
+.about-heading {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.about-heading h1 {
+    margin: 8px 0;
+    background: linear-gradient(110deg, #d889a9 0%, #e7ae83 24%, #d7c46f 45%, #8eb89a 65%, #8ab9cf 82%, #b19bd0 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(34px, 5.5vw, 58px);
+    text-shadow: 1px 2px #fff;
+}
+
+.travel-heading h1 {
+    margin: 16px 0;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(42px, 7vw, 72px);
+    text-shadow: 1px 2px #fff;
+}
+
+.travel-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    text-align: left;
+}
+
+.travel-legend {
+    display: grid;
+    gap: 8px;
+    min-width: 225px;
+    margin: 16px 0 0;
+    padding: 12px 16px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    background: #fff9f2;
+    box-shadow: 0 3px 12px #0002;
+    color: #263529;
+    font: 600 14px Arial, Helvetica, sans-serif;
+}
+
+.travel-legend p {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0;
+}
+
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 14px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px #0005;
+}
+
+.visited-dot {
+    background: #d46b78;
+}
+
+.wishlist-dot {
+    background: #397ca8;
+}
+
+.travel-instructions {
+    margin: 0 0 18px;
+    font-size: 17px;
+}
+
+.travel-map-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 10px;
+}
+
+.travel-map-controls button {
+    padding: 8px 13px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: #fff9f2;
+    box-shadow: 0 2px 8px #0002;
+    color: #263529;
+    font: 600 14px Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.travel-map-controls button:hover,
+.travel-map-controls button:focus-visible,
+.travel-arrange-button[aria-pressed="true"] {
+    background: #dcebdc;
+}
+
+.travel-map-status {
+    margin: 0;
+    font: 14px/1.4 Arial, Helvetica, sans-serif;
+}
+
+.skills-heading {
+    min-height: 0;
+    margin-bottom: 28px;
+    padding: 0;
+    background: none;
+    color: #263529;
+    text-align: left;
+}
+
+.skills-heading h1 {
+    margin: 16px 0 8px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    text-shadow: 1px 2px #fff;
+}
+
+.skills-heading p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 32px);
+}
+
+.skills-card {
+    min-height: 300px;
+    padding: clamp(20px, 3vw, 32px);
+    border: 7px solid #fff;
+    border-radius: 20px;
+    background: #f7e4e9;
+    box-shadow: 0 5px 22px #0003;
+}
+
+.courses-card {
+    background: #e4d9f2;
+}
+
+.skills-card h2 {
+    margin: 0 0 16px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(25px, 3.5vw, 36px);
+}
+
+.skills-placeholder {
+    margin: 0;
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+.collection-heading {
+    margin-bottom: 28px;
+    color: #263529;
+}
+
+.collection-heading h1 {
+    margin: 16px 0 8px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    text-shadow: 1px 2px #fff;
+}
+
+.collection-heading p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 32px);
+}
+
+.collection-card {
+    min-width: 0;
+    min-height: 240px;
+    padding: clamp(20px, 3vw, 32px);
+    border: 7px solid #fff;
+    border-radius: 20px;
+    background: #f7e4e9;
+    box-shadow: 0 5px 22px #0003;
+    color: #263529;
+}
+
+.collection-card-secondary {
+    background: #e4d9f2;
+}
+
+.collection-card h2 {
+    margin: 0 0 14px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(25px, 3.5vw, 36px);
+}
+
+.collection-card p {
+    margin: 0 0 18px;
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+.collection-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 2px solid #78917b;
+    border-radius: 999px;
+    background: #fff9f2;
+    color: #31553b;
+    font: 600 15px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.collection-link:hover,
+.collection-link:focus-visible {
+    background: #dcebdc;
+}
+
+.scrapbook-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.scrapbook-card {
+    min-height: 320px;
+}
+
+.contact-card {
+    max-width: 720px;
+    min-height: 0;
+}
+
+.contact-page .collection-heading {
+    min-height: 0;
+    padding: 0;
+    background: none;
+    color: #263529;
+    text-align: left;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+}
+
+.contact-link {
+    display: grid;
+    min-height: 112px;
+    align-content: center;
+    gap: 8px;
+    padding: 20px 24px;
+    border: 7px solid #fff;
+    border-radius: 18px;
+    background: #f7e4e9;
+    box-shadow: 0 5px 18px #0002;
+    color: #263529;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:nth-child(even) {
+    background: #e4d9f2;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px #0003;
+}
+
+.contact-link:focus-visible {
+    outline: 3px solid #31553b;
+    outline-offset: 3px;
+}
+
+.contact-platform {
+    color: #31553b;
+    font: 700 22px/1.2 Arial, Helvetica, sans-serif;
+}
+
+.contact-handle {
+    font: 15px/1.4 Arial, Helvetica, sans-serif;
+    overflow-wrap: anywhere;
+}
+
+.activities-heading {
+    margin-bottom: 28px;
+    color: #263529;
+}
+
+.activities-heading h1 {
+    margin: 16px 0 8px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(38px, 6vw, 68px);
+    text-shadow: 1px 2px #fff;
+}
+
+.activities-heading p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.activity-card {
+    min-width: 0;
+    padding: clamp(18px, 3vw, 30px);
+    border: 7px solid #fff;
+    border-radius: 20px;
+    background: #f7e4e9;
+    box-shadow: 0 5px 22px #0003;
+    color: #263529;
+}
+
+.activity-card h2 {
+    margin: 0 0 16px;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(25px, 3.5vw, 36px);
+}
+
+.crossword-card {
+    background: #e4d9f2;
+}
+
+.crossword-embed {
+    min-height: 520px;
+    overflow: auto;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+}
+
+.crossword-embed p {
+    padding: 20px;
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.crossword-embed a,
+.forum-link {
+    color: #31553b;
+}
+
+.activities-extras {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 32px);
+    margin-top: 28px;
+}
+
+.flag-counter-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.flag-counter-card a {
+    display: inline-block;
+}
+
+.forum-card {
+    background: #e4d9f2;
+}
+
+.forum-card p {
+    margin: 0 0 18px;
+    font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+.forum-link {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 2px solid #78917b;
+    border-radius: 999px;
+    background: #fff9f2;
+    font: 600 15px Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.forum-link:hover,
+.forum-link:focus-visible {
+    background: #dcebdc;
+}
+
+.certificate-section {
+    margin-top: 36px;
+    padding: clamp(18px, 3vw, 32px);
+    border: 7px solid #fff;
+    border-radius: 20px;
+    background: #fff9f2eF;
+    box-shadow: 0 5px 22px #0003;
+}
+
+.certificate-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.certificate-heading h2 {
+    margin: 0;
+    color: #aa7894;
+    font-family: "Poland Canned Into Kaito", sans-serif;
+    font-size: clamp(28px, 4vw, 40px);
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.certificate-tile {
+    min-width: 0;
+    text-align: center;
+}
+
+.certificate-tile[hidden] {
+    display: none;
+}
+
+.certificate-tile a {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.certificate-tile img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.4;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 8px #0002;
+    object-fit: cover;
+    object-position: top;
+}
+
+.certificate-tile a:hover img,
+.certificate-tile a:focus-visible img {
+    outline: 3px solid #78917b;
+    outline-offset: 2px;
+}
+
+.certificate-tile h3 {
+    margin: 10px 0 0;
+    color: #aa7894;
+    font: 600 15px/1.35 Arial, Helvetica, sans-serif;
+}
+
+.world-map {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    border-radius: 22px;
+    box-shadow: 0 5px 22px #0003;
+}
+
+.world-map-art {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 0 0 7px #fff;
+}
+
+.travel-pin {
+    position: absolute;
+    display: grid;
+    justify-items: center;
+    width: 30px;
+    height: 18px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transform: translate(-50%, -120%);
+}
+
+.world-map.is-arranging .travel-pin {
+    cursor: grab;
+    touch-action: none;
+}
+
+.world-map.is-arranging .travel-pin:active {
+    z-index: 3;
+    cursor: grabbing;
+}
+
+.world-map.is-arranging .travel-pin .pin-label {
+    opacity: 1;
+}
+
+.pin-dot {
+    position: relative;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    border: 3px solid #fff;
+    border-radius: 50% 50% 50% 0;
+    background: #d46b78;
+    box-shadow: 0 2px 6px #26352980;
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.wishlist-pin .pin-dot {
+    background: #397ca8;
+}
+
+.pin-label {
+    position: absolute;
+    bottom: calc(100% + 3px);
+    left: 50%;
+    z-index: 2;
+    width: max-content;
+    max-width: 190px;
+    padding: 7px 10px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    background: #fff9f2;
+    box-shadow: 0 2px 8px #0003;
+    color: #263529;
+    font: 600 14px Arial, Helvetica, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.travel-pin:hover .pin-dot,
+.travel-pin:focus-visible .pin-dot {
+    background: #547b57;
+    transform: rotate(-45deg) scale(1.2);
+}
+
+.travel-pin.wishlist-pin:hover .pin-dot,
+.travel-pin.wishlist-pin:focus-visible .pin-dot {
+    background: #245878;
+}
+
+.travel-pin[aria-pressed="true"] .pin-dot {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+.travel-pin:hover .pin-label,
+.travel-pin:focus-visible .pin-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.travel-pin:focus-visible {
+    outline: none;
+}
+
+.pin-london { left: 40.5%; top: 26%; }
+.pin-birmingham { left: 40.4%; top: 24.8%; }
+.pin-paris { left: 42.5%; top: 28.8%; }
+.pin-connecticut { left: 23.5%; top: 29%; }
+.pin-new-york { left: 22.8%; top: 30%; }
+.pin-orlando { left: 22.8%; top: 39.5%; }
+.pin-uae { left: 61.4%; top: 42.8%; }
+.pin-saudi { left: 58.5%; top: 41.5%; }
+.pin-oman { left: 62.3%; top: 44.2%; }
+.pin-sri-lanka { left: 66.5%; top: 56%; }
+.pin-maldives { left: 65.7%; top: 58.2%; }
+.pin-mauritius { left: 60.2%; top: 71.5%; }
+.pin-germany { left: 45.5%; top: 28.5%; }
+.pin-italy { left: 47.2%; top: 34.5%; }
+.pin-greece { left: 49.5%; top: 36.5%; }
+.pin-japan { left: 89%; top: 24%; }
+.pin-canada { left: 14.5%; top: 17.5%; }
+.pin-scotland { left: 40%; top: 23.5%; }
+
+.pin-london .pin-label { transform: translate(-100%, 4px); }
+.pin-london:hover .pin-label,
+.pin-london:focus-visible .pin-label { transform: translate(-100%, 0); }
+.pin-birmingham .pin-label { transform: translate(0, 4px); }
+.pin-birmingham:hover .pin-label,
+.pin-birmingham:focus-visible .pin-label { transform: translate(0, 0); }
+.pin-paris .pin-label { transform: translate(0, 4px); }
+.pin-paris:hover .pin-label,
+.pin-paris:focus-visible .pin-label { transform: translate(0, 0); }
+.pin-new-york .pin-label,
+.pin-saudi .pin-label,
+.pin-italy .pin-label,
+.pin-canada .pin-label { transform: translate(-100%, 4px); }
+.pin-orlando .pin-label { transform: translate(0, 4px); }
+.pin-new-york:hover .pin-label,
+.pin-new-york:focus-visible .pin-label,
+.pin-saudi:hover .pin-label,
+.pin-saudi:focus-visible .pin-label,
+.pin-italy:hover .pin-label,
+.pin-italy:focus-visible .pin-label,
+.pin-canada:hover .pin-label,
+.pin-canada:focus-visible .pin-label { transform: translate(-100%, 0); }
+.pin-orlando:hover .pin-label,
+.pin-orlando:focus-visible .pin-label { transform: translate(0, 0); }
+.pin-connecticut .pin-label,
+.pin-oman .pin-label,
+.pin-germany .pin-label,
+.pin-scotland .pin-label { transform: translate(0, 4px); }
+.pin-connecticut:hover .pin-label,
+.pin-connecticut:focus-visible .pin-label,
+.pin-oman:hover .pin-label,
+.pin-oman:focus-visible .pin-label,
+.pin-germany:hover .pin-label,
+.pin-germany:focus-visible .pin-label,
+.pin-scotland:hover .pin-label,
+.pin-scotland:focus-visible .pin-label { transform: translate(0, 0); }
+
+.travel-gallery {
+    min-height: 150px;
+    margin-top: 28px;
+    padding: 20px clamp(16px, 3vw, 32px);
+    border: 7px solid #fff;
+    border-radius: 18px;
+    background: #fff9f2;
+    box-shadow: 0 5px 22px #0003;
+    color: #263529;
+}
+
+.travel-gallery h2 {
+    margin: 0 0 8px;
+    color: #aa7894;
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+.travel-gallery p {
+    margin: 0;
+    font: 16px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.travel-gallery-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.travel-gallery-photos:empty {
+    display: none;
+}
+
+.travel-gallery-photos img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px #0002;
+}
+
+.about-profile {
+    position: relative;
+    width: clamp(112px, 14vw, 164px);
+    aspect-ratio: 1;
+    margin: 0 16px 0 10px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px #0004;
+    cursor: pointer;
+}
+
+.about-profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transform: rotate(270deg);
+    animation: about-photo-spin 28s linear infinite;
+}
+
+.profile-popouts {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    display: grid;
+    gap: 10px;
+    width: max-content;
+    transform: translate(-100%, -50%);
+}
+
+.profile-popouts p {
+    margin: 0;
+    padding: 12px 16px;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    background: #fff8f4;
+    box-shadow: 0 3px 12px #0003;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+    transform: translateX(12px);
+}
+
+.about-profile:hover .profile-popouts p,
+.about-profile:focus .profile-popouts p {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.85fr);
+    align-items: start;
+    gap: 12px;
+}
+
+.about-left-column {
+    display: grid;
+    gap: 12px;
+}
+
+.about-right-column {
+    display: grid;
+    gap: 12px;
+}
+
+.extra-images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.extra-images-grid img {
+    display: block;
+    width: min(100%, 180px);
+    aspect-ratio: 1;
+    justify-self: center;
+    border: 2px dashed #78917b;
+    border-radius: 10px;
+    background: #fff9;
+    object-fit: contain;
+}
+
+.about-card {
+    --paper-tint: #f6e8f0;
+    --tape-color: #e8c7dc;
+    position: relative;
+    padding: 16px;
+    border: 0;
+    border-radius: 3px;
+    background-color: var(--paper-tint);
+    background-image:
+        repeating-linear-gradient(to bottom, transparent 0 30px, #a9c4dc55 30px 31px),
+        linear-gradient(#ffffffa6, #ffffffa6);
+    box-shadow: 2px 4px 10px #3c314026;
+}
+
+.about-card::before {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    width: 42px;
+    height: 13px;
+    background: var(--tape-color);
+    content: "";
+    opacity: 0.78;
+    transform: translateX(-50%) rotate(-3deg);
+}
+
+.about-card:nth-child(3n + 2) {
+    --paper-tint: #eaf1e3;
+    --tape-color: #b9d7c1;
+}
+
+.about-card:nth-child(3n) {
+    --paper-tint: #f7edcf;
+    --tape-color: #ead39a;
+}
+
+.about-left-column > .about-card:nth-child(odd) {
+    transform: rotate(-0.3deg);
+}
+
+.about-left-column > .about-card:nth-child(even) {
+    transform: rotate(0.35deg);
+}
+
+.about-right-column > .about-card:nth-child(odd) {
+    transform: rotate(0.3deg);
+}
+
+.about-right-column > .about-card:nth-child(even) {
+    transform: rotate(-0.35deg);
+}
+
+.about-page .fandom-image,
+.about-page .extra-images-grid img,
+.about-page .movie-poster {
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 2px 3px 8px #3c314033;
+}
+
+.about-page .fandom-image {
+    background: #fff9;
+}
+
+.about-page .fandom-tile {
+    position: relative;
+    gap: 5px;
+    padding: 7px 7px 10px;
+    background: #fff;
+    box-shadow: 2px 3px 8px #3c314033;
+}
+
+.about-page .fandom-tile::before {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    z-index: 1;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffffbd;
+    border-radius: 50%;
+    background: var(--pin-color, #e7abc1);
+    box-shadow: 0 1px 3px #3335;
+    content: "";
+    transform: translateX(-50%);
+}
+
+.about-page .fandom-tile:nth-child(2n) {
+    --pin-color: #9fc9b0;
+}
+
+.about-page .fandom-tile:nth-child(3n) {
+    --pin-color: #e6cd82;
+}
+
+.about-page .fandom-tile:nth-child(odd) {
+    transform: rotate(-1.5deg);
+}
+
+.about-page .fandom-tile:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.about-page .fandom-image {
+    width: min(100%, 112px);
+    border: 6px solid #fff;
+    box-shadow: none;
+}
+
+.about-page .fandom-tile p {
+    font: 600 12px/1.2 Georgia, "Times New Roman", serif;
+}
+
+.about-page .about-card h2 {
+    font-family: "Poland Canned Into Kaito", Georgia, cursive;
+    text-shadow: 1px 1px #fff9;
+}
+
+.about-card h2 {
+    margin: 0 0 10px;
+    color: #aa7894;
+    font-size: clamp(20px, 2.5vw, 29px);
+    line-height: 1.15;
+}
+
+.about-page .introduction-card h2 { color: #c87e9e; font-family: Georgia, serif; font-style: italic; }
+.about-page .house-card h2 { color: #72977b; }
+.about-page .artists-card h2 { color: #b47d9c; font-family: Georgia, serif; font-style: italic; }
+.about-page .fandom-card h2 { color: #718fb7; font-family: Georgia, serif; font-style: italic; }
+.about-page .anime-card h2 { color: #b387bb; }
+.about-page .special-mention-card h2 { color: #c987a5; }
+.about-page > .anime-card h2 { color: #a58dbc; }
+.about-page .movies-card h2 { color: #d29475; font-family: Georgia, serif; font-style: italic; }
+.about-page .shows-card h2 { color: #799e89; }
+.about-page .extra-images-card h2 { color: #bd9a56; font-family: Georgia, serif; font-style: italic; }
+
+.about-page .movie-tile h3 {
+    color: #a9789b;
+    font: 600 13px/1.25 Georgia, "Times New Roman", serif;
+}
+
+.introduction-card p {
+    margin: 6px 0;
+    font-size: clamp(14px, 1.4vw, 17px);
+    line-height: 1.35;
+}
+
+.house-card {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.house-card h2 {
+    justify-self: stretch;
+}
+
+.house-crest {
+    display: block;
+    width: min(100%, 150px);
+    max-height: 165px;
+    object-fit: contain;
+}
+
+.house-card p {
+    margin: 8px 0 0;
+    color: #263529;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.artist-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+.artist-button {
+    width: 100%;
+    padding: 7px 9px;
+    border: 1px solid #78917b;
+    border-radius: 8px;
+    background: #fff9;
+    color: #263529;
+    cursor: pointer;
+    font: inherit;
+    text-align: left;
+}
+
+.artist-button:hover,
+.artist-button[aria-pressed="true"] {
+    background: #dcebdc;
+}
+
+.artist-button:focus-visible {
+    outline: 3px solid #31553b;
+    outline-offset: 2px;
+}
+
+.spotify-player {
+    display: block;
+    margin-top: 12px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.fandom-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.fandom-tile {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.fandom-image {
+    width: min(100%, 150px);
+    aspect-ratio: 1;
+    border: 2px dashed #78917b;
+    border-radius: 10px;
+    background: #fff9;
+    object-fit: cover;
+}
+
+.fandom-tile p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.movies-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.movies-heading h2 {
+    margin: 0;
+}
+
+.movies-card,
+.shows-card,
+.anime-card {
+    margin-top: 12px;
+}
+
+.about-right-column .anime-card {
+    margin-top: 0;
+}
+
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.special-mention-grid {
+    grid-template-columns: minmax(0, 180px);
+    justify-content: center;
+}
+
+.shows-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.shows-heading h2 {
+    margin: 0;
+}
+
+.movie-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font: 600 15px Arial, Helvetica, sans-serif;
+}
+
+.movie-page-button {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid #78917b;
+    border-radius: 50%;
+    background: #fff9;
+    color: #263529;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.movie-page-button:disabled {
+    cursor: default;
+    opacity: 0.4;
+}
+
+.movie-page-button:focus-visible {
+    outline: 3px solid #31553b;
+    outline-offset: 3px;
+}
+
+.movie-page {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.shows-page {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.movie-page[hidden] {
+    display: none;
+}
+
+.shows-page[hidden] {
+    display: none;
+}
+
+.movie-tile {
+    min-width: 0;
+    text-align: center;
+}
+
+.movie-poster {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border: 2px dashed #78917b;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.movie-tile h3 {
+    margin: 6px 0 0;
+    color: #aa7894;
+    font: 600 13px/1.25 Arial, Helvetica, sans-serif;
+}
+
+@keyframes about-photo-spin {
+    from { transform: rotate(270deg); }
+    to { transform: rotate(630deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .welcome-disc,
+    .welcome-popout,
+    .welcome-title,
+    .start-label span,
+    .about-profile img,
+    .profile-popouts p {
+        transition: none;
+        animation: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .welcome-card {
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .welcome-stage {
+        height: min(76vh, 590px);
+        min-height: 0;
+    }
+
+    .welcome-disc {
+        top: 175px;
+        left: 50%;
+        width: min(68vw, 300px);
+    }
+
+    .welcome-popout {
+        top: auto;
+        left: 50%;
+        width: min(82vw, 320px);
+        min-height: 82px;
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+    }
+
+    .popout-one {
+        bottom: 210px;
+    }
+
+    .popout-two {
+        bottom: 110px;
+    }
+
+    .popout-three {
+        bottom: 10px;
+    }
+
+    .welcome-stage:hover .welcome-disc,
+    .welcome-stage:focus .welcome-disc {
+        transform: translate(-50%, -50%);
+    }
+
+    .welcome-stage:hover .popout-one,
+    .welcome-stage:focus .popout-one,
+    .welcome-stage:hover .popout-two,
+    .welcome-stage:focus .popout-two,
+    .welcome-stage:hover .popout-three,
+    .welcome-stage:focus .popout-three {
+        transform: translate(-50%, 0) scale(1);
+    }
+
+    .panel-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .homepage-content {
+        padding: 24px 18px 40px;
+    }
+
+    .homepage-welcome {
+        margin-top: 0;
+        padding-top: 48px;
+    }
+
+    .homepage-welcome-deer {
+        width: 42px;
+        max-height: 48px;
+    }
+
+    .homepage-welcome-decoration {
+        top: 43px;
+        left: calc(50% + 120px);
+        width: 42px;
+        height: 48px;
+    }
+
+    .homepage-stickers img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .homepage-flower-stars span {
+        font-size: 22px;
+        opacity: 0.55;
+    }
+
+    .homepage-flower-stars span:nth-child(13),
+    .homepage-flower-stars span:nth-child(14),
+    .homepage-flower-stars span:nth-child(15),
+    .homepage-flower-stars span:nth-child(16) {
+        font-size: 18px;
+    }
+
+    .homepage-profile {
+        grid-template-columns: minmax(130px, 160px) minmax(0, 1fr);
+        gap: 14px;
+        width: min(100%, 560px);
+    }
+
+    .homepage-photo {
+        border-width: 4px;
+    }
+
+    .homepage-details {
+        font-size: 15px;
+    }
+
+    .homepage-tagline {
+        min-height: 58px;
+        padding: 12px 24px;
+    }
+
+    .homepage-flower {
+        font-size: 20px;
+    }
+
+    .middle-panels {
+        grid-template-rows: repeat(2, minmax(220px, auto));
+    }
+
+    .side-panel {
+        min-height: 280px;
+    }
+
+    .about-page {
+        padding: 18px 12px 32px;
+        background-attachment: scroll;
+    }
+
+    .skills-content {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activities-extras {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .certificate-heading {
+        align-items: flex-start;
+    }
+
+    .travel-heading {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .travel-legend {
+        min-width: 0;
+        margin-top: 0;
+    }
+
+    .world-map {
+        margin-top: 24px;
+    }
+
+    .pin-label {
+        font-size: 12px;
+    }
+
+    .about-profile {
+        width: 112px;
+        margin-right: 4px;
+    }
+
+    .profile-popouts {
+        display: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-left-column,
+    .about-right-column {
+        gap: 10px;
+    }
+
+    .about-card {
+        padding: 13px;
+    }
+
+    .movie-page {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .anime-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .shows-page {
+        gap: 12px;
+    }
+
+    .fandom-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 440px) {
+    .home-banner {
+        min-height: 150px;
+        padding: 24px 14px;
+    }
+
+    .homepage-content {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .homepage-profile {
+        grid-template-columns: minmax(96px, 118px) minmax(0, 1fr);
+        gap: 10px;
+        width: calc(100% - 56px);
+    }
+
+    .homepage-bio h2 {
+        font-size: clamp(22px, 7vw, 30px);
+    }
+
+    .homepage-name-row {
+        gap: 6px;
+    }
+
+    .homepage-name-decoration {
+        width: clamp(42px, 14vw, 58px);
+    }
+
+    .homepage-details {
+        margin: 7px 0 10px;
+        font-size: 11px;
+    }
+
+    .homepage-details span {
+        margin: 0 3px;
+    }
+
+    .homepage-tagline {
+        min-height: 50px;
+        padding: 9px 18px;
+    }
+
+    .homepage-tagline p {
+        font-size: 12px;
+    }
+
+    .homepage-flower {
+        font-size: 17px;
+    }
+
+    .homepage-interests {
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .homepage-stickers img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .about-page {
+        padding: 14px 10px 28px;
+    }
+
+    .about-heading {
+        align-items: center;
+        gap: 8px;
+    }
+
+    .about-heading h1 {
+        font-size: clamp(30px, 9vw, 42px);
+    }
+
+    .about-profile {
+        width: 92px;
+        margin: 0 4px;
+    }
+
+    .about-card {
+        padding: 11px;
+    }
+
+    .house-crest {
+        width: min(100%, 120px);
+        max-height: 135px;
+    }
+
+    .about-scrapbook-stickers span {
+        font-size: 16px;
+    }
+
+    .movie-page {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .anime-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .certificate-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

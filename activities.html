@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Interactive Activities | My Wonderland</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="menu">
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="site-menu" class="menu-panel" aria-label="Main menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+    <a href="travel.html">Travel</a>
+    <a href="projects.html">My projects</a>
+    <a href="skills.html">My skills and courses</a>
+    <a href="scrapbook.html">My scrapbook</a>
+    <a href="activities.html" aria-current="page">Interactive activities</a>
+    <a href="cool-things.html">Cool Things</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+</div>
+
+<main class="about-page activities-page" aria-labelledby="activities-title">
+  <div class="activities-heading">
+    <h1 id="activities-title">Interactive Activities</h1>
+    <p>Have fun exploring, puzzling, and connecting!</p>
+  </div>
+  <section class="activity-card crossword-card" aria-labelledby="crossword-title">
+    <h2 id="crossword-title">Crossword Puzzle</h2>
+    <div class="crossword-embed">
+      <script type="text/javascript">
+        boatload_puzzles_format = 'Landscape';
+      </script>
+      <p>Loading <a href="https://www.boatloadpuzzles.com/playcrossword">crossword puzzle</a>. One moment please.</p>
+      <script type="text/javascript" src="https://www.boatloadpuzzles.com/Crossword.js"></script>
+    </div>
+  </section>
+  <div class="activities-extras">
+    <section class="activity-card flag-counter-card" aria-labelledby="flag-counter-title">
+      <h2 id="flag-counter-title">Visitors Around the World</h2>
+      <a href="https://info.flagcounter.com/rYUA" target="_blank" rel="noopener">
+        <img src="https://s05.flagcounter.com/count2/rYUA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter showing visitor flags">
+      </a>
+    </section>
+    <section class="activity-card forum-card" aria-labelledby="forum-title">
+      <h2 id="forum-title">Visit My Forum</h2>
+      <p>Stop by my Wonderland forum and say hello!</p>
+      <a class="forum-link" href="https://wonderland1.bbs.fc2.com/" target="_blank" rel="noopener">Open the forum</a>
+    </section>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

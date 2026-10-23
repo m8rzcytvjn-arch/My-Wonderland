@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Projects | My Wonderland</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="menu">
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="site-menu" class="menu-panel" aria-label="Main menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+    <a href="travel.html">Travel</a>
+    <a href="projects.html" aria-current="page">My projects</a>
+    <a href="skills.html">My skills and courses</a>
+    <a href="scrapbook.html">My scrapbook</a>
+    <a href="activities.html">Interactive activities</a>
+    <a href="cool-things.html">Cool Things</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+</div>
+
+<main class="about-page collection-page" aria-labelledby="projects-title">
+  <header class="collection-heading">
+    <h1 id="projects-title">My Projects</h1>
+    <p>A place to share the things I’ve been making.</p>
+  </header>
+  <section class="collection-grid" aria-label="Projects">
+    <article class="collection-card">
+      <h2>My Wonderland</h2>
+      <p>My personal website, made to share my interests, travels, photos, and more in a creative way.</p>
+      <a class="collection-link" href="index.html">Visit the home page</a>
+    </article>
+    <article class="collection-card collection-card-secondary">
+      <h2>More projects</h2>
+      <p>More projects will be added here.</p>
+    </article>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

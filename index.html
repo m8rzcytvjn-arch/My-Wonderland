@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Wonderland</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="welcome-screen" class="welcome-screen">
+  <div class="welcome-card">
+    <div class="welcome-stage" tabindex="0" aria-label="Welcome to my website">
+      <div class="welcome-disc">
+        <img class="welcome-image" src="me.JPG" alt="">
+        <svg class="welcome-title" viewBox="0 0 240 240" aria-hidden="true">
+          <defs>
+            <path id="welcome-circle" d="M 120,120 m -91,0 a 91,91 0 1,1 182,0 a 91,91 0 1,1 -182,0"></path>
+          </defs>
+          <text>
+            <textPath href="#welcome-circle">My Wonderland</textPath>
+          </text>
+        </svg>
+      </div>
+      <section class="welcome-popout popout-one" aria-label="Welcome message">
+        <h2>Welcome to my website</h2>
+        <p>Click the cake to start</p>
+      </section>
+      <section class="welcome-popout popout-two" aria-label="Welcome message">
+        <h2>Get to know me</h2>
+        <p>Interests, projects, contact info</p>
+      </section>
+      <section class="welcome-popout popout-three" aria-label="Welcome message">
+        <h2>Enjoy</h2>
+      </section>
+    </div>
+    <button class="start-button" type="button" aria-label="Click me to start">
+      <span class="start-cake" aria-hidden="true">🎂</span>
+      <span class="start-label" aria-hidden="true"><span>Click me to start&nbsp; • &nbsp;Click me to start&nbsp; • &nbsp;</span></span>
+    </button>
+  </div>
+</main>
+
+<div id="site-content" hidden>
+<div class="menu">
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="site-menu" class="menu-panel" aria-label="Main menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+    <a href="travel.html">Travel</a>
+    <a href="projects.html">My projects</a>
+    <a href="skills.html">My skills and courses</a>
+    <a href="scrapbook.html">My scrapbook</a>
+    <a href="activities.html">Interactive activities</a>
+    <a href="cool-things.html">Cool Things</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+</div>
+
+<header class="home-banner">
+  <h1 class="rainbow-title" aria-label="My Wonderland"><span aria-hidden="true">M</span><span aria-hidden="true">y</span><span aria-hidden="true"> </span><span aria-hidden="true">W</span><span aria-hidden="true">o</span><span aria-hidden="true">n</span><span aria-hidden="true">d</span><span aria-hidden="true">e</span><span aria-hidden="true">r</span><span aria-hidden="true">l</span><span aria-hidden="true">a</span><span aria-hidden="true">n</span><span aria-hidden="true">d</span></h1>
+  <p>Made by Olivia Star Westley.</p>
+</header>
+<div class="homepage-banner-decoration" aria-hidden="true">
+  <img src="https://64.media.tumblr.com/059763ad7d67d2bc72b53b30639fe7c9/1d1a397483c48290-f7/s2048x3072/652393ccd1299a121f8486af7d48010df35cbed3.pnj" alt="">
+</div>
+
+<main class="homepage-content">
+  <div class="homepage-stickers" aria-hidden="true">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjZ1OGltcHducGFveHIwejJ3Z3c5MjRqZHJhMDVxazIxMTd5NXpraCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/W1aUeWXywDGxi/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWlvcWsyejRsZjFmbDNwMm9jNHV2ZW4zbGw2MnhjcGZ5eTVnM202ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/27ppQUOxe7KlG/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHd4bG05aDNkNDBuNm8zdGtueTRoMzdyeWZ3MmNpMmxrem5pendpOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/upR5JdLW6DbUs/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTlvdHdpemRva3Vua3ZrOTVtdXdvbWd1cGlldG8xOWI1MzJmamk1ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/109a2dqzv1MzsY/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTl5M3BqbmxsZHM0a2ZqY3IwZ3hyaHZ6NjdkcDV4bmZ3NjF2eXNiZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KHcLDbJdDqdn1LaEn5/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2s5eHN6MTE5cHlhYXVsOGY5ZHZydTFrZGp5NjNxbWplZzhmYmJ6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/13mqmjNN0PNNAs/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3JyNDJ4ZWRxdmQ0cTMwMXU3aXZwa2V4Z2NqZ2x6amE0djl3ZTF4YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/10XZq0DCLTO93y/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGF4eHVramszMXJhMjk5cHh0aDY3bjNvaDJiNmtxZ2l6ODRtdng2dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/11tEnH1YTS6gF2/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmlyMGExejgxZXlhbDJha3J5NHdqMW5hd3AyNDJwaG56bnBxaHlqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/DanHZlrpqcQEw/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDhxd2s2c3hzbXc3NzRzcWFwcWNpNGNpN2R0a2VzcTBqcnZtbHI0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/EzRljV79T0gda/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjN5YWJqYmtjaTU5bHA2YXIxbG1sc241ZXUxazVzNjNuaWhtYXgzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/c5o9wg2A6MqA0/giphy.gif" alt="" width="90" height="90">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczV6Ymp3dnp2djlmcW4xYnN2d2t2anBxMWVyNzUwMWRodnFiZTE1aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/13kViJRlB2PAAg/giphy.gif" alt="" width="90" height="90">
+  </div>
+  <div class="homepage-flower-stars" aria-hidden="true">
+    <span>✿</span><span>✧</span><span>❀</span><span>✦</span>
+    <span>✧</span><span>✿</span><span>✦</span><span>❀</span>
+    <span>✿</span><span>✧</span><span>❀</span><span>✦</span>
+    <span>✧</span><span>✿</span><span>✦</span><span>❀</span>
+  </div>
+  <section class="homepage-profile" aria-labelledby="homepage-name">
+    <div class="homepage-photo-column">
+      <img class="homepage-photo" src="me.JPG" alt="Olivia">
+      <div class="homepage-after-profile">
+        <img src="https://i.pinimg.com/originals/e2/55/fc/e255fc70c8fd6901154fa4b90c896af8.gif" alt="" width="350" height="200">
+      </div>
+    </div>
+    <div class="homepage-bio">
+      <div class="homepage-name-row">
+        <h2 id="homepage-name"><span aria-hidden="true">✦</span> Olivia <span aria-hidden="true">✦</span></h2>
+        <img
+          class="homepage-name-decoration"
+          src="https://i.pinimg.com/originals/8b/77/e2/8b77e29ce4f29ab1fb4e6970a3608d13.gif"
+          alt="Animated character decoration"
+          width="300"
+          height="300"
+        >
+      </div>
+      <p class="homepage-details">16 <span aria-hidden="true">|</span> She/Her <span aria-hidden="true">|</span> British</p>
+      <div class="homepage-tagline">
+        <span class="homepage-flower homepage-flower-left" aria-hidden="true">✿</span>
+        <p>Student + Collector <span aria-hidden="true">|</span> Creative</p>
+        <span class="homepage-flower homepage-flower-right" aria-hidden="true">✿</span>
+      </div>
+      <p class="homepage-interests">Doodling, Random projects, Drawing, Animation, Arts and Crafts, Researching topics of interest.</p>
+    </div>
+  </section>
+  <section class="homepage-welcome" aria-labelledby="homepage-welcome-title">
+    <img
+      class="homepage-welcome-decoration"
+      src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/25425fb2-bc94-4349-8d8a-6eabb4d6ccd2/dcm9zur-d3aafd96-e9dd-475b-8fff-3c9c9da579ab.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI1NDI1ZmIyLWJjOTQtNDM0OS04ZDhhLTZlYWJiNGQ2Y2NkMlwvZGNtOXp1ci1kM2FhZmQ5Ni1lOWRkLTQ3NWItOGZmZi0zYzljOWRhNTc5YWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.KGsD11A8gvFTMvfp-9nUeoiX77beix-0aN13Rk97sII"
+      alt=""
+      width="200"
+      height="160"
+    >
+    <div class="homepage-welcome-heading">
+      <h2 id="homepage-welcome-title">WELCOME</h2>
+      <img
+        class="homepage-welcome-deer"
+        src="https://media0.giphy.com/media/g0NZo5jXrlTsRKD5B8/giphy.gif?cid=6c09b952643y4fvmcgodvy9r0vjkz3mnh583zj0biws09bnu&amp;ep=v1_internal_gif_by_id&amp;rid=giphy.gif&amp;ct=s"
+        alt=""
+      >
+    </div>
+    <p>This is my little space on the internet where i get to share the things i love, little projects i am doing, and whatever else is going on in my head.</p>
+  </section>
+</main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

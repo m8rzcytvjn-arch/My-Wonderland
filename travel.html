@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Travel | My Wonderland</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="menu">
+  <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="site-menu" class="menu-panel" aria-label="Main menu" hidden>
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+    <a href="travel.html" aria-current="page">Travel</a>
+    <a href="projects.html">My projects</a>
+    <a href="skills.html">My skills and courses</a>
+    <a href="scrapbook.html">My scrapbook</a>
+    <a href="activities.html">Interactive activities</a>
+    <a href="cool-things.html">Cool Things</a>
+    <a href="contact.html">Contact me</a>
+  </nav>
+</div>
+
+<main class="about-page travel-page" aria-labelledby="travel-title">
+  <header class="travel-heading">
+    <h1 id="travel-title">Travel</h1>
+    <aside class="travel-legend" aria-label="Map legend">
+      <p><span class="legend-dot visited-dot" aria-hidden="true"></span> Places I went to</p>
+      <p><span class="legend-dot wishlist-dot" aria-hidden="true"></span> Places I want to go to</p>
+    </aside>
+  </header>
+  <p class="travel-instructions">Hover over a pin or select it to see the place name and its photos. You can also arrange the markers to match the map.</p>
+  <div class="travel-map-controls" aria-label="Map marker controls">
+    <button class="travel-arrange-button" type="button" aria-pressed="false">Arrange markers</button>
+    <button class="travel-reset-button" type="button">Reset marker positions</button>
+    <p class="travel-map-status" aria-live="polite">Marker positions are saved in this browser.</p>
+  </div>
+  <div class="world-map" role="group" aria-label="World map with travel locations">
+    <img class="world-map-art" src="travel-world-map-new.jpg" alt="Colorful political world map showing visited destinations and places Olivia wants to visit">
+    <button class="travel-pin pin-london" type="button" aria-label="London, United Kingdom" data-place="London, UK" data-status="visited" data-photos="travel-london-1.jpg,travel-london-2.jpg,travel-london-3.jpg,travel-london-4.jpg,travel-london-5.jpg,travel-london-6.jpg,travel-london-7.jpg,travel-london-8.jpg,travel-london-9.jpg" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">London, UK</span></button>
+    <button class="travel-pin pin-birmingham" type="button" aria-label="Birmingham, United Kingdom" data-place="Birmingham, UK" data-status="visited" data-photos="travel-birmingham-1.jpg,travel-birmingham-2.jpg,travel-birmingham-3.jpg,travel-birmingham-4.jpg,travel-birmingham-5.jpg,travel-birmingham-6.jpg,travel-birmingham-7.jpg,travel-birmingham-8.jpg,travel-birmingham-9.jpg" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Birmingham, UK</span></button>
+    <button class="travel-pin pin-paris" type="button" aria-label="Paris, France" data-place="Paris, France" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Paris, France</span></button>
+    <button class="travel-pin pin-connecticut" type="button" aria-label="Connecticut, United States" data-place="Connecticut, USA" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Connecticut, USA</span></button>
+    <button class="travel-pin pin-new-york" type="button" aria-label="New York, United States" data-place="New York, USA" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">New York, USA</span></button>
+    <button class="travel-pin pin-orlando" type="button" aria-label="Orlando, Florida, United States" data-place="Orlando, Florida, USA" data-status="visited" data-photos="travel-orlando-1.jpg,travel-orlando-2.jpg,travel-orlando-3.jpg,travel-orlando-4.jpg,travel-orlando-5.jpg,travel-orlando-6.jpg,travel-orlando-7.jpg,travel-orlando-8.jpg,travel-orlando-9.jpg,travel-orlando-10.jpg,travel-orlando-11.jpg,travel-orlando-12.jpg,travel-orlando-13.jpg" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Orlando, Florida</span></button>
+    <button class="travel-pin pin-uae" type="button" aria-label="United Arab Emirates" data-place="UAE" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">UAE</span></button>
+    <button class="travel-pin pin-saudi" type="button" aria-label="Saudi Arabia" data-place="Saudi Arabia" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Saudi Arabia</span></button>
+    <button class="travel-pin pin-oman" type="button" aria-label="Oman" data-place="Oman" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Oman</span></button>
+    <button class="travel-pin pin-sri-lanka" type="button" aria-label="Sri Lanka" data-place="Sri Lanka" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Sri Lanka</span></button>
+    <button class="travel-pin pin-maldives" type="button" aria-label="Maldives" data-place="Maldives" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Maldives</span></button>
+    <button class="travel-pin pin-mauritius" type="button" aria-label="Mauritius" data-place="Mauritius" data-status="visited" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Mauritius</span></button>
+    <button class="travel-pin wishlist-pin pin-germany" type="button" aria-label="Germany, a place I want to visit" data-place="Germany" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Germany</span></button>
+    <button class="travel-pin wishlist-pin pin-italy" type="button" aria-label="Italy, a place I want to visit" data-place="Italy" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Italy</span></button>
+    <button class="travel-pin wishlist-pin pin-greece" type="button" aria-label="Greece, a place I want to visit" data-place="Greece" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Greece</span></button>
+    <button class="travel-pin wishlist-pin pin-japan" type="button" aria-label="Japan, a place I want to visit" data-place="Japan" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Japan</span></button>
+    <button class="travel-pin wishlist-pin pin-canada" type="button" aria-label="Canada, a place I want to visit" data-place="Canada" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Canada</span></button>
+    <button class="travel-pin wishlist-pin pin-scotland" type="button" aria-label="Scotland, a place I want to visit" data-place="Scotland" data-status="wishlist" aria-pressed="false"><span class="pin-dot"></span><span class="pin-label">Scotland</span></button>
+  </div>
+  <section class="travel-gallery" aria-live="polite" aria-atomic="true">
+    <h2 class="travel-gallery-title">Location photos</h2>
+    <p class="travel-gallery-message">Select a visited place on the map to see its photos here.</p>
+    <div class="travel-gallery-photos" aria-label="Photos from this location"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
